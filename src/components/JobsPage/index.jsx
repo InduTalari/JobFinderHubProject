@@ -17,7 +17,8 @@ const JobsPage = () => {
 
   useEffect(() => {
     getData()
-  }, [getData])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const getData = async () => {
     const jwtToken = Cookies.get('jwt_token')
