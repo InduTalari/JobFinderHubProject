@@ -17,7 +17,7 @@ const JobsPage = () => {
 
   useEffect(() => {
     getData()
-  }, [])
+  }, [getData])
 
   const getData = async () => {
     const jwtToken = Cookies.get('jwt_token')
