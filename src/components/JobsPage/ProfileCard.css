@@ -1,0 +1,23 @@
+.profile-section {
+  background-image: url(
+'https://assets.ccbp.in/frontend/react-js/profile-bg.png'
+  );
+
+  background-size: cover;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.profile-img {
+  width: 60px;
+}
+
+.name-heading {
+  color: #6366f1;
+  font-size: 20px;
+}
+
+.short-bio-para {
+  color: #475569;
+  font-size: 14px;
+}

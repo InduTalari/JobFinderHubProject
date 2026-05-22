@@ -1,0 +1,54 @@
+.similar-job-card {
+  background-color: #272727;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  list-style-type: none;
+}
+
+.job-item-logo-container {
+  display: flex;
+}
+
+.company-logo-img {
+  width: 60px;
+  height: 60px;
+}
+
+.title-rating-container {
+  margin-left: 10px;
+}
+
+.job-item-title {
+  color: white;
+  font-size: 18px;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+}
+
+.job-item-rating {
+  color: white;
+  margin-left: 8px;
+}
+
+.dis-heading {
+  color: white;
+}
+
+.job-item-description-para {
+  color: #cbd5e1;
+}
+
+.loc-emp-container {
+  display: flex;
+  gap: 20px;
+}
+
+.loc-emp-section {
+  display: flex;
+  align-items: center;
+  color: white;
+}

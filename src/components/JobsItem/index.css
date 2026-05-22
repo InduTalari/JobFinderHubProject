@@ -1,0 +1,26 @@
+/* Extra Small (Size < 576px) and Small (Size >= 576px) */
+.jobs-item-container {
+  background-color: #000000;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.skills-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+}
+
+.jobs-item-card {
+  background-color: #272727;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: #cbd5e1;
+}

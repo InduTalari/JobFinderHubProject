@@ -1,0 +1,41 @@
+.link-style {
+  text-decoration: none;
+}
+
+.job-item {
+  background-color: #272727;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.job-item-logo-container {
+  display: flex;
+}
+
+.company-logo-img {
+  width: 60px;
+  height: 60px;
+}
+
+.title-rating-container {
+  margin-left: 15px;
+}
+
+.job-item-title,
+.dis-heading,
+.package-heading {
+  color: #ffffff;
+}
+
+.rating-container,
+.loc-emp-container,
+.loc-emp-section {
+  display: flex;
+  align-items: center;
+}
+
+.job-item-description-para {
+  color: #cbd5e1;
+}

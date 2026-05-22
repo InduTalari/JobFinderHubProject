@@ -1,0 +1,58 @@
+/* Container for the 404 page */
+.not-found-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #121212;
+  text-align: center;
+  padding: 20px;
+}
+
+.not-found-img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.heading-notfound {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.para-notfound {
+  font-size: 16px;
+  color: #b6c5ff;
+}
+
+@media (max-width:768px) {
+  .not-found-img {
+    width: 220px;
+  }
+
+  .heading-notfound {
+    font-size: 24px;
+  }
+
+  .para-notfound {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:576px) {
+  .not-found-img {
+    width: 180px;
+  }
+
+  .heading-notfound {
+    font-size: 20px;
+  }
+
+  .para-notfound {
+    font-size: 12px;
+    padding: 0 10px;
+  }
+}
