@@ -99,7 +99,7 @@ body {
   cursor: pointer;
 }
 
-@media (max-width:576px) {
+@media (max-width: 576px) {
   .home-container {
     background-image: url('https://assets.ccbp.in/frontend/react-js/home-sm-bg.png');
     background-size: cover;
@@ -124,7 +124,7 @@ body {
   }
 }
 
-@media (min-width:577px) {
+@media (min-width: 577px) {
   .home-container {
     background-image: url('https://assets.ccbp.in/frontend/react-js/home-lg-bg.png');
     background-size: cover;

@@ -1,10 +1,6 @@
 import './App.css'
 
-import {
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom'
+import {Routes, Route, Navigate} from 'react-router-dom'
 
 import Login from './components/Login'
 import Home from './components/Home'
@@ -16,11 +12,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 const App = () => {
   return (
     <Routes>
-
-      <Route
-        path="/login"
-        element={<Login />}
-      />
+      <Route path="/login" element={<Login />} />
 
       <Route
         path="/"
@@ -49,21 +41,9 @@ const App = () => {
         }
       />
 
-      <Route
-        path="/not-found"
-        element={<NotFound />}
-      />
+      <Route path="/not-found" element={<NotFound />} />
 
-      <Route
-        path="*"
-        element={
-          <Navigate
-            to="/not-found"
-            replace
-          />
-        }
-      />
-
+      <Route path="*" element={<Navigate to="/not-found" replace />} />
     </Routes>
   )
 }

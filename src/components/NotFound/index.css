@@ -28,7 +28,7 @@
   color: #b6c5ff;
 }
 
-@media (max-width:768px) {
+@media (max-width: 768px) {
   .not-found-img {
     width: 220px;
   }
@@ -42,7 +42,7 @@
   }
 }
 
-@media (max-width:576px) {
+@media (max-width: 576px) {
   .not-found-img {
     width: 180px;
   }

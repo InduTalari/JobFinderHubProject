@@ -1,6 +1,6 @@
-import { useState, useEffect } from 'react'
+import {useState, useEffect} from 'react'
 import Cookies from 'js-cookie'
-import { BsSearch } from 'react-icons/bs'
+import {BsSearch} from 'react-icons/bs'
 import Loader from 'react-loader-spinner'
 
 import Header from '../Header'
@@ -46,14 +46,11 @@ const JobsPage = () => {
 
       if (profileResponse.ok && jobsResponse.ok) {
         setProfile({
-          profileImageUrl:
-            profileData.profile_details.profile_image_url,
+          profileImageUrl: profileData.profile_details.profile_image_url,
 
-          name:
-            profileData.profile_details.name,
+          name: profileData.profile_details.name,
 
-          shortBio:
-            profileData.profile_details.short_bio,
+          shortBio: profileData.profile_details.short_bio,
         })
 
         const updatedJobsData = jobsData.jobs.map(each => ({
@@ -84,12 +81,7 @@ const JobsPage = () => {
   if (loading) {
     return (
       <div data-testid="loader">
-        <Loader
-          type="ThreeDots"
-          color="#ffffff"
-          height={50}
-          width={50}
-        />
+        <Loader type="ThreeDots" color="#ffffff" height={50} width={50} />
       </div>
     )
   }
@@ -99,22 +91,17 @@ const JobsPage = () => {
       <Header />
 
       <div className="jobPage-container">
-
         <div className="left-section">
           <ProfileCard profile={profile} />
         </div>
 
         <div className="right-section">
-
           <div className="search-container">
-
             <input
               type="search"
               placeholder="Search"
               value={searchInput}
-              onChange={e =>
-                setSearchInput(e.target.value)
-              }
+              onChange={e => setSearchInput(e.target.value)}
               className="search-input"
             />
 
@@ -126,20 +113,14 @@ const JobsPage = () => {
             >
               <BsSearch />
             </button>
-
           </div>
 
           <ul>
             {jobsList.map(eachJob => (
-              <JobCard
-                key={eachJob.id}
-                job={eachJob}
-              />
+              <JobCard key={eachJob.id} job={eachJob} />
             ))}
           </ul>
-
         </div>
-
       </div>
     </div>
   )

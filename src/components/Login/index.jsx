@@ -1,5 +1,5 @@
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import {useState} from 'react'
+import {useNavigate} from 'react-router-dom'
 import Cookies from 'js-cookie'
 
 import './index.css'
@@ -7,28 +7,19 @@ import './index.css'
 const Login = () => {
   const navigate = useNavigate()
 
-  const [username, setUsername] =
-    useState('')
+  const [username, setUsername] = useState('')
 
-  const [password, setPassword] =
-    useState('')
+  const [password, setPassword] = useState('')
 
-  const [errorMsg, setErrorMsg] =
-    useState('')
+  const [errorMsg, setErrorMsg] = useState('')
 
-  const [showErrorMsg,
-    setShowErrorMsg] =
-    useState(false)
+  const [showErrorMsg, setShowErrorMsg] = useState(false)
 
   const submitOnSuccess = jwtToken => {
-    Cookies.set(
-      'jwt_token',
-      jwtToken,
-      { expires: 30 }
-    )
+    Cookies.set('jwt_token', jwtToken, {expires: 30})
 
     navigate('/', {
-      replace: true
+      replace: true,
     })
 
     setShowErrorMsg(false)
@@ -49,27 +40,17 @@ const Login = () => {
 
     const options = {
       method: 'POST',
-      body: JSON.stringify(
-        userDetails
-      ),
+      body: JSON.stringify(userDetails),
     }
 
-    const response = await fetch(
-      'https://apis.ccbp.in/login',
-      options
-    )
+    const response = await fetch('https://apis.ccbp.in/login', options)
 
-    const data =
-      await response.json()
+    const data = await response.json()
 
     if (response.ok) {
-      submitOnSuccess(
-        data.jwt_token
-      )
+      submitOnSuccess(data.jwt_token)
     } else {
-      submitOnFailure(
-        data.error_msg
-      )
+      submitOnFailure(data.error_msg)
     }
   }
 
@@ -80,9 +61,7 @@ const Login = () => {
 
   return (
     <div className="login-container">
-
       <div className="card-container">
-
         <div className="logo-container">
           <img
             src="https://assets.ccbp.in/frontend/react-js/logo-img.png"
@@ -91,14 +70,8 @@ const Login = () => {
           />
         </div>
 
-        <form
-          className="form-container"
-          onSubmit={onSubmitForm}
-        >
-
-          <label htmlFor="username">
-            Username
-          </label>
+        <form className="form-container" onSubmit={onSubmitForm}>
+          <label htmlFor="username">Username</label>
 
           <input
             id="username"
@@ -106,16 +79,10 @@ const Login = () => {
             placeholder="Username"
             className="username-ip"
             value={username}
-            onChange={e =>
-              setUsername(
-                e.target.value
-              )
-            }
+            onChange={e => setUsername(e.target.value)}
           />
 
-          <label htmlFor="password">
-            Password
-          </label>
+          <label htmlFor="password">Password</label>
 
           <input
             id="password"
@@ -123,37 +90,20 @@ const Login = () => {
             placeholder="Password"
             className="username-ip"
             value={password}
-            onChange={e =>
-              setPassword(
-                e.target.value
-              )
-            }
+            onChange={e => setPassword(e.target.value)}
           />
 
-          <button
-            className="login-btn"
-            type="submit"
-          >
+          <button className="login-btn" type="submit">
             Login
           </button>
 
-          {showErrorMsg && (
-            <p className="error-msg">
-              {errorMsg}
-            </p>
-          )}
+          {showErrorMsg && <p className="error-msg">{errorMsg}</p>}
         </form>
 
-        <button
-          className="demo-btn"
-          type="button"
-          onClick={setDemoDetails}
-        >
+        <button className="demo-btn" type="button" onClick={setDemoDetails}>
           Demo
         </button>
-
       </div>
-
     </div>
   )
 }

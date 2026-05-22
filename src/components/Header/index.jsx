@@ -1,7 +1,7 @@
-import { Link, useNavigate } from 'react-router-dom'
-import { AiOutlineHome } from 'react-icons/ai'
-import { CgWorkAlt } from 'react-icons/cg'
-import { IoIosLogOut } from 'react-icons/io'
+import {Link, useNavigate} from 'react-router-dom'
+import {AiOutlineHome} from 'react-icons/ai'
+import {CgWorkAlt} from 'react-icons/cg'
+import {IoIosLogOut} from 'react-icons/io'
 import Cookies from 'js-cookie'
 
 import '../Home/index.css'
@@ -12,7 +12,7 @@ const Header = () => {
 
   const onLogout = () => {
     Cookies.remove('jwt_token')
-    navigate('/login', { replace: true })
+    navigate('/login', {replace: true})
   }
 
   return (
@@ -30,19 +30,19 @@ const Header = () => {
 
         <div className="header-mobile-view">
           <Link to="/" className="nav-link">
-            <li><AiOutlineHome /></li>
+            <li>
+              <AiOutlineHome />
+            </li>
           </Link>
 
           <Link to="/jobs" className="nav-link">
-            <li><CgWorkAlt /></li>
+            <li>
+              <CgWorkAlt />
+            </li>
           </Link>
 
           <li>
-            <button
-              type="button"
-              className="nav-link"
-              onClick={onLogout}
-            >
+            <button type="button" className="nav-link" onClick={onLogout}>
               <IoIosLogOut />
             </button>
           </li>
@@ -61,11 +61,7 @@ const Header = () => {
         </div>
 
         <li>
-          <button
-            type="button"
-            className="nav-btn"
-            onClick={onLogout}
-          >
+          <button type="button" className="nav-btn" onClick={onLogout}>
             Logout
           </button>
         </li>

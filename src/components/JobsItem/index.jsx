@@ -45,12 +45,7 @@ const JobsItem = () => {
   if (loading) {
     return (
       <div data-testid="loader">
-        <Loader
-          type="ThreeDots"
-          color="#ffffff"
-          height={50}
-          width={50}
-        />
+        <Loader type="ThreeDots" color="#ffffff" height={50} width={50} />
       </div>
     )
   }
@@ -68,10 +63,7 @@ const JobsItem = () => {
 
         <ul className="skills-section">
           {jobData.skills?.map(skill => (
-            <SkillItem
-              key={skill.name}
-              skill={skill}
-            />
+            <SkillItem key={skill.name} skill={skill} />
           ))}
         </ul>
 
@@ -79,10 +71,7 @@ const JobsItem = () => {
 
         <ul>
           {similarJobsData.map(job => (
-            <SimilarJobCard
-              key={job.id}
-              job={job}
-            />
+            <SimilarJobCard key={job.id} job={job} />
           ))}
         </ul>
       </div>
